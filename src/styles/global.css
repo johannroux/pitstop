@@ -2,15 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-cream: #faf7f2;
-  --color-brown: #5c4a3a;
-  --color-rose: #c9a9a6;
-  --color-charcoal: #2a2520;
+  --color-cream: #f2e0e6;
+  --color-blush: #fdf4f7;
+  --color-brown: #6b2d4a;
+  --color-rose: #c94b6e;
+  --color-burgundy: #8e2d4e;
+  --color-charcoal: #1a0812;
 
   --font-heading: "Sacramento", cursive;
   --font-body: "Source Sans 3", system-ui, sans-serif;
 
-  --shadow-card: 0 4px 24px rgb(92 74 58 / 8%);
+  --shadow-card: 0 4px 28px rgb(142 45 78 / 14%);
 }
 
 @layer base {
