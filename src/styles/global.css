@@ -7,7 +7,7 @@
   --color-rose: #c9a9a6;
   --color-charcoal: #2a2520;
 
-  --font-heading: "Lora", Georgia, serif;
+  --font-heading: "Sacramento", cursive;
   --font-body: "Source Sans 3", system-ui, sans-serif;
 
   --shadow-card: 0 4px 24px rgb(92 74 58 / 8%);
@@ -26,7 +26,7 @@
   h2,
   h3,
   h4 {
-    @apply font-heading text-charcoal;
+    @apply font-heading font-normal text-charcoal;
   }
 }
 
