@@ -39,7 +39,7 @@ const { post } = Astro.props;
   <div class="px-4 py-4">
     <p class="text-brown">{post.caption}</p>
 
-    <div class="mt-4 flex items-center justify-between">
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
       <div class="flex gap-4 text-sm text-brown/70">
         <span aria-label={`${post.likeCount} likes`}>
           ♥ {formatCount(post.likeCount)}
@@ -51,7 +51,7 @@ const { post } = Astro.props;
 
       <a
         href="/concepts"
-        class="rounded-full border border-rose/40 px-3 py-1 text-xs font-medium text-brown/70 transition-colors hover:border-rose hover:text-charcoal"
+        class="inline-flex min-h-11 items-center rounded-full border border-rose/40 px-4 py-2 text-sm font-medium text-brown/70 transition-colors hover:border-rose hover:text-charcoal"
         title="Subscriptions coming soon"
       >
         Subscribe

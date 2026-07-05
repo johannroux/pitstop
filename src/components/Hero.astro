@@ -1,19 +1,274 @@
-<section class="border-b border-rose/30 bg-gradient-to-b from-rose/25 via-burgundy/10 to-cream px-4 py-12 sm:py-16">
-  <div class="mx-auto max-w-2xl text-center">
-    <p class="text-sm font-medium uppercase tracking-widest text-brown/60">
-      The marketplace for armpit lovers
-    </p>
-    <h1 class="mt-3 text-3xl leading-tight text-charcoal sm:text-4xl">
-      Where armpit appreciation finds its home.
-    </h1>
-    <p class="mt-4 text-brown/80">
-      Discover creators, browse the feed, and see what a curated pit stop feels like.
-    </p>
-    <a
-      href="/creators"
-      class="mt-8 inline-block rounded-full bg-burgundy px-6 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-rose"
+---
+const storyBeats = [
+  {
+    label: 'Pull over',
+    text: 'Every long stretch deserves a pit stop — the kind where you want to pull over, not the kind where you\'re just counting seconds until the lights go green again.',
+    from: 'left',
+    rotate: '-3',
+    offset: 'sm:ml-0 sm:mr-auto sm:max-w-md',
+    labelAlign: 'text-left',
+  },
+  {
+    label: 'The pits',
+    text: 'No tire changes. No fuel stops. Just a lane for people who\'ve always noticed what small talk leaves unsaid — the line of a raised arm, a sleeve pushed up just far enough to change the whole frame. Some call it niche. We call it the pits. (The good kind.)',
+    from: 'right',
+    rotate: '2',
+    offset: 'sm:ml-auto sm:mr-0 sm:max-w-lg',
+    labelAlign: 'text-right',
+  },
+  {
+    label: 'Pit crew',
+    text: 'Think of our creators as the pit crew: they know the angles, they respect the craft, and they never rush a finish. You\'re not here to lap anyone. You\'re here to linger.',
+    from: 'left',
+    rotate: '-1',
+    offset: 'sm:mx-auto sm:max-w-xl sm:text-center',
+    labelAlign: 'text-center',
+  },
+  {
+    label: 'Pit lane',
+    text: 'The feed below is your pit lane — scroll at your pace, flag down whatever catches your eye, and stay as long as the mood holds. We\'re not running a race. We\'re running a vibe.',
+    from: 'up',
+    rotate: '0',
+    offset: 'sm:max-w-2xl sm:mx-auto sm:text-center',
+    labelAlign: 'text-center',
+  },
+];
+
+const tickerWords = [
+  'pull over',
+  'the pits',
+  'pit crew',
+  'pit lane',
+  'linger',
+  'green flag',
+  'under the arm',
+  'running a vibe',
+];
+---
+
+<section
+  id="hero-intro"
+  class="hero-scene relative overflow-hidden border-b border-rose/30 bg-gradient-to-b from-rose/25 via-burgundy/10 to-cream px-4 py-10 sm:px-6 sm:py-20"
+  aria-labelledby="hero-heading"
+>
+  <div
+    class="hero-parallax pointer-events-none absolute -left-16 top-24 h-56 w-full -rotate-6 checkered-accent opacity-40 sm:-left-32 sm:h-72 sm:w-[140%]"
+    data-parallax-speed="0.18"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="hero-parallax pointer-events-none absolute -right-10 top-1/2 h-px w-full bg-gradient-to-r from-transparent via-rose/50 to-transparent sm:-right-20 sm:w-[120%]"
+    data-parallax-speed="-0.12"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute -left-24 top-8 h-56 w-56 rounded-full bg-rose/20 blur-3xl"
+    aria-hidden="true"
+    data-reveal
+    data-delay="1"
+  ></div>
+  <div
+    class="pointer-events-none absolute -right-16 bottom-24 h-72 w-72 rounded-full bg-burgundy/15 blur-3xl"
+    aria-hidden="true"
+    data-reveal
+    data-delay="2"
+  ></div>
+
+  <div class="relative mx-auto max-w-5xl">
+    <header class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium uppercase tracking-widest text-brown/60" data-reveal>
+        The marketplace for armpit lovers
+      </p>
+      <h1
+        id="hero-heading"
+        class="mt-3 text-3xl leading-tight text-charcoal sm:text-4xl lg:text-5xl"
+        data-reveal
+        data-delay="1"
+      >
+        Where armpit appreciation finds its home.
+      </h1>
+      <p class="mt-4 text-base text-brown/80 sm:text-lg" data-reveal data-delay="2">
+        Discover creators, browse the feed, and see what a curated pit stop feels like.
+      </p>
+    </header>
+
+    <div
+      class="relative my-12 overflow-hidden border-y border-rose/20 py-3 sm:my-16"
+      data-reveal
+      data-delay="2"
     >
-      Explore creators
-    </a>
+      <div class="hero-ticker flex w-max gap-6 whitespace-nowrap text-xs font-medium uppercase tracking-[0.25em] text-rose/45 sm:gap-8 sm:text-sm sm:tracking-[0.4em]">
+        {
+          [...tickerWords, ...tickerWords].map((word) => (
+            <span class="inline-flex items-center gap-8">
+              {word}
+              <span aria-hidden="true">◆</span>
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="relative space-y-12 sm:space-y-24 lg:space-y-28">
+      {
+        storyBeats.map((beat, index) => (
+          <article
+            class:list={['hero-beat flex flex-col gap-4 sm:gap-6', beat.offset]}
+            data-scroll-beat
+            data-rotate={beat.rotate}
+            data-reveal={beat.from}
+            data-delay={String(Math.min(index + 1, 5))}
+          >
+            <h2
+              class:list={[
+                'hero-beat-label origin-left font-heading leading-none text-burgundy/45',
+                beat.labelAlign,
+                beat.labelAlign === 'text-right' && 'origin-right',
+                beat.labelAlign === 'text-center' && 'origin-center',
+                index === 3 ? 'text-5xl sm:text-8xl lg:text-9xl' : 'text-4xl sm:text-7xl lg:text-8xl',
+              ]}
+              data-parallax-label
+            >
+              {beat.label}
+            </h2>
+
+            <p
+              class="hero-beat-body text-base text-brown/85 sm:text-lg"
+              data-parallax-body
+            >
+              {beat.text}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+
+    <div
+      class="mx-auto mt-16 flex max-w-xl flex-col items-center gap-4 text-center sm:mt-20"
+      data-reveal="up"
+      data-delay="3"
+    >
+      <a
+        href="/creators"
+        class="inline-flex min-h-11 items-center rounded-full bg-burgundy px-7 py-3 text-sm font-medium text-cream shadow-card transition-all hover:-translate-y-0.5 hover:bg-rose hover:shadow-lg"
+      >
+        Explore creators
+      </a>
+
+      <p class="text-xs font-medium uppercase tracking-widest text-brown/50">
+        Green flag below — the feed's ready when you are
+      </p>
+
+      <a
+        href="#feed"
+        class="touch-target group mt-2 flex flex-col items-center gap-1 text-brown/45 transition-colors hover:text-rose"
+        aria-label="Scroll to the feed"
+      >
+        <span class="text-[0.65rem] uppercase tracking-widest">Scroll the pit lane</span>
+        <svg
+          class="h-5 w-5 animate-bounce motion-reduce:animate-none"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="M12 5v14M6 13l6 6 6-6"></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>
+
+<script>
+  const hero = document.getElementById('hero-intro');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (hero) {
+    const revealElements = hero.querySelectorAll('[data-reveal]');
+
+    if (prefersReducedMotion) {
+      revealElements.forEach((element) => element.classList.add('is-visible'));
+    } else {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: '0px 0px -8% 0px' },
+      );
+
+      revealElements.forEach((element) => observer.observe(element));
+    }
+
+    if (!prefersReducedMotion) {
+      const parallaxLayers = hero.querySelectorAll('[data-parallax-speed]');
+      const scrollBeats = hero.querySelectorAll('[data-scroll-beat]');
+      const ticker = hero.querySelector('.hero-ticker');
+      const mobileQuery = window.matchMedia('(max-width: 639px)');
+      let ticking = false;
+
+      const updateScrollMotion = () => {
+        ticking = false;
+        const scrollY = window.scrollY;
+        const heroTop = hero.offsetTop;
+        const heroScroll = scrollY - heroTop;
+        const isMobile = mobileQuery.matches;
+
+        if (!isMobile) {
+          parallaxLayers.forEach((layer) => {
+            const speed = Number(layer.getAttribute('data-parallax-speed') ?? 0);
+            layer.style.transform = `translate3d(0, ${heroScroll * speed}px, 0)`;
+          });
+
+          if (ticker) {
+            ticker.style.transform = `translate3d(${-(scrollY * 0.35) % (ticker.scrollWidth / 2)}px, 0, 0)`;
+          }
+        } else {
+          parallaxLayers.forEach((layer) => {
+            layer.style.transform = '';
+          });
+
+          if (ticker) {
+            ticker.style.transform = '';
+          }
+        }
+
+        scrollBeats.forEach((beat) => {
+          const rect = beat.getBoundingClientRect();
+          const center = rect.top + rect.height * 0.5;
+          const progress = (window.innerHeight * 0.5 - center) / window.innerHeight;
+          const drift = Math.max(-1, Math.min(1, progress));
+          const rotate = Number(beat.getAttribute('data-rotate') ?? 0);
+          const label = beat.querySelector('[data-parallax-label]');
+          const body = beat.querySelector('[data-parallax-body]');
+          const driftScale = isMobile ? 0.35 : 1;
+
+          if (label) {
+            label.style.transform = `translate3d(0, ${drift * -12 * driftScale}px, 0) rotate(${rotate + drift * 1.5 * driftScale}deg)`;
+          }
+
+          if (body) {
+            body.style.transform = `translate3d(${drift * 12 * driftScale}px, 0, 0)`;
+          }
+        });
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(updateScrollMotion);
+        }
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', updateScrollMotion, { passive: true });
+      mobileQuery.addEventListener('change', updateScrollMotion);
+      updateScrollMotion();
+    }
+  }
+</script>

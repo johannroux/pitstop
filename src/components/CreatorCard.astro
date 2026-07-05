@@ -21,17 +21,17 @@ const { creator } = Astro.props;
     />
     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-burgundy/20 to-transparent" />
     <div class="absolute bottom-0 left-0 right-0 p-4">
-      <div class="flex items-center gap-3">
+      <div class="flex min-w-0 items-center gap-3">
         <img
           src={creator.avatarUrl}
           alt=""
           width="48"
           height="48"
-          class="h-12 w-12 rounded-full object-cover ring-2 ring-cream/80"
+          class="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-cream/80"
           loading="lazy"
         />
-        <div>
-          <h2 class="font-heading text-lg text-cream">
+        <div class="min-w-0">
+          <h2 class="truncate font-heading text-lg text-cream">
             {creator.displayName}
           </h2>
           <p class="text-xs text-cream/80">

@@ -7,26 +7,26 @@ const navLinks = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="border-b border-rose/40 bg-cream/70 backdrop-blur-sm sticky top-0 z-50">
+<header class="sticky top-0 z-50 border-b border-rose/40 bg-cream/70 pt-[env(safe-area-inset-top)] backdrop-blur-sm">
   <nav
-    class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6"
+    class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4"
     aria-label="Main navigation"
   >
     <a
       href="/"
-      class="font-heading text-xl text-charcoal transition-colors hover:text-rose sm:text-2xl"
+      class="touch-target -ml-2 shrink-0 font-heading text-xl text-charcoal transition-colors hover:text-rose sm:text-2xl"
     >
       Pitstop
     </a>
 
-    <ul class="flex items-center gap-6 sm:gap-8">
+    <ul class="flex shrink-0 items-center gap-1 sm:gap-2">
       {
         navLinks.map(({ href, label }) => (
           <li>
             <a
               href={href}
               class:list={[
-                'text-sm font-medium transition-colors hover:text-charcoal',
+                'touch-target rounded-lg px-3 text-sm font-medium transition-colors hover:text-charcoal',
                 currentPath === href || currentPath.startsWith(`${href}/`)
                   ? 'text-charcoal underline decoration-rose decoration-2 underline-offset-4'
                   : 'text-brown/80',
