@@ -5,7 +5,7 @@ const storyBeats = [
     text: 'Every long stretch deserves a pit stop — the kind where you want to pull over, not the kind where you\'re just counting seconds until the lights go green again.',
     from: 'left',
     rotate: '-3',
-    offset: 'sm:ml-0 sm:mr-auto sm:max-w-md',
+    offset: 'mr-auto max-w-md text-left sm:max-w-md',
     labelAlign: 'text-left',
   },
   {
@@ -13,7 +13,7 @@ const storyBeats = [
     text: 'No tire changes. No fuel stops. Just a lane for people who\'ve always noticed what small talk leaves unsaid — the line of a raised arm, a sleeve pushed up just far enough to change the whole frame. Some call it niche. We call it the pits. (The good kind.)',
     from: 'right',
     rotate: '2',
-    offset: 'sm:ml-auto sm:mr-0 sm:max-w-lg',
+    offset: 'ml-auto max-w-lg text-right sm:max-w-lg',
     labelAlign: 'text-right',
   },
   {
@@ -21,16 +21,16 @@ const storyBeats = [
     text: 'Think of our creators as the pit crew: they know the angles, they respect the craft, and they never rush a finish. You\'re not here to lap anyone. You\'re here to linger.',
     from: 'left',
     rotate: '-1',
-    offset: 'sm:mx-auto sm:max-w-xl sm:text-center',
-    labelAlign: 'text-center',
+    offset: 'mr-auto max-w-xl text-left',
+    labelAlign: 'text-left',
   },
   {
     label: 'Pit lane',
     text: 'The feed below is your pit lane — scroll at your pace, flag down whatever catches your eye, and stay as long as the mood holds. We\'re not running a race. We\'re running a vibe.',
-    from: 'up',
-    rotate: '0',
-    offset: 'sm:max-w-2xl sm:mx-auto sm:text-center',
-    labelAlign: 'text-center',
+    from: 'right',
+    rotate: '2',
+    offset: 'ml-auto max-w-xl text-right',
+    labelAlign: 'text-right',
   },
 ];
 
@@ -113,7 +113,7 @@ const tickerWords = [
       {
         storyBeats.map((beat, index) => (
           <article
-            class:list={['hero-beat flex flex-col gap-4 sm:gap-6', beat.offset]}
+            class:list={['hero-beat flex flex-col gap-0', beat.offset]}
             data-scroll-beat
             data-rotate={beat.rotate}
             data-reveal={beat.from}
@@ -121,7 +121,7 @@ const tickerWords = [
           >
             <h2
               class:list={[
-                'hero-beat-label origin-left font-heading leading-none text-burgundy/45',
+                'hero-beat-label origin-left -mb-1 font-heading leading-[0.85] text-burgundy/45 sm:-mb-2',
                 beat.labelAlign,
                 beat.labelAlign === 'text-right' && 'origin-right',
                 beat.labelAlign === 'text-center' && 'origin-center',
@@ -133,7 +133,7 @@ const tickerWords = [
             </h2>
 
             <p
-              class="hero-beat-body text-base text-brown/85 sm:text-lg"
+              class="hero-beat-body pt-1 text-base text-brown/85 sm:pt-2 sm:text-lg"
               data-parallax-body
             >
               {beat.text}
@@ -249,7 +249,7 @@ const tickerWords = [
           const driftScale = isMobile ? 0.35 : 1;
 
           if (label) {
-            label.style.transform = `translate3d(0, ${drift * -12 * driftScale}px, 0) rotate(${rotate + drift * 1.5 * driftScale}deg)`;
+            label.style.transform = `rotate(${rotate + drift * 1.5 * driftScale}deg)`;
           }
 
           if (body) {
