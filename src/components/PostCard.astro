@@ -1,0 +1,61 @@
+---
+import type { PostWithCreator } from '../lib/types';
+import { formatCount, formatRelativeTime } from '../lib/content';
+
+interface Props {
+  post: PostWithCreator;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="overflow-hidden rounded-2xl bg-white shadow-card transition-shadow hover:shadow-lg">
+  <header class="flex items-center gap-3 px-4 pt-4">
+    <img
+      src={post.creator.avatarUrl}
+      alt=""
+      width="40"
+      height="40"
+      class="h-10 w-10 rounded-full object-cover ring-2 ring-rose/30"
+      loading="lazy"
+    />
+    <div class="min-w-0 flex-1">
+      <p class="truncate font-medium text-charcoal">{post.creator.displayName}</p>
+      <time datetime={post.postedAt} class="text-xs text-brown/60">
+        {formatRelativeTime(post.postedAt)}
+      </time>
+    </div>
+  </header>
+
+  <img
+    src={post.imageUrl}
+    alt=""
+    width="800"
+    height="600"
+    class="mt-3 aspect-[4/3] w-full object-cover"
+    loading="lazy"
+  />
+
+  <div class="px-4 py-4">
+    <p class="text-brown">{post.caption}</p>
+
+    <div class="mt-4 flex items-center justify-between">
+      <div class="flex gap-4 text-sm text-brown/70">
+        <span aria-label={`${post.likeCount} likes`}>
+          ♥ {formatCount(post.likeCount)}
+        </span>
+        <span aria-label={`${post.commentCount} comments`}>
+          💬 {formatCount(post.commentCount)}
+        </span>
+      </div>
+
+      <a
+        href="/concepts"
+        class="rounded-full border border-rose/40 px-3 py-1 text-xs font-medium text-brown/70 transition-colors hover:border-rose hover:text-charcoal"
+        title="Subscriptions coming soon"
+      >
+        Subscribe
+      </a>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "creator-1",
+    "slug": "velvet-underarm",
+    "displayName": "Velvet Underarm",
+    "tagline": "Soft light, softer pits. Editorial with a wink.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-1/200/200",
+    "avatarPrompt": "Warm-toned portrait avatar, soft studio lighting, elegant and abstract, no explicit content",
+    "followerCount": 12400,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-1/600/800",
+    "previewPrompt": "Atmospheric editorial crop, cream and rose tones, fashion-adjacent abstract composition"
+  },
+  {
+    "id": "creator-2",
+    "slug": "pitstop-patricia",
+    "displayName": "Pitstop Patricia",
+    "tagline": "Your pit stop between meetings.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-2/200/200",
+    "avatarPrompt": "Confident creator avatar, muted rose background, refined portrait lighting",
+    "followerCount": 8720,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-2/600/800",
+    "previewPrompt": "Minimal lifestyle aesthetic, warm neutrals, soft shadows, editorial crop"
+  },
+  {
+    "id": "creator-3",
+    "slug": "axilla-atelier",
+    "displayName": "Axilla Atelier",
+    "tagline": "Curating the curve where arm meets soul.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-3/200/200",
+    "avatarPrompt": "Artistic portrait avatar, gallery lighting, sophisticated and tasteful",
+    "followerCount": 23100,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-3/600/800",
+    "previewPrompt": "Fine-art photography style, abstract skin tones, museum-quality composition"
+  },
+  {
+    "id": "creator-4",
+    "slug": "deodorant-dreams",
+    "displayName": "Deodorant Dreams",
+    "tagline": "Unscented. Unbothered. Unforgettable.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-4/200/200",
+    "avatarPrompt": "Playful creator avatar, warm cream backdrop, approachable editorial portrait",
+    "followerCount": 5680,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-4/600/800",
+    "previewPrompt": "Dreamy soft-focus image, pastel warm palette, abstract atmospheric crop"
+  },
+  {
+    "id": "creator-5",
+    "slug": "maschalagnia-muse",
+    "displayName": "Maschalagnia Muse",
+    "tagline": "Poetry in perspiration. Metaphor in motion.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-5/200/200",
+    "avatarPrompt": "Poetic portrait avatar, golden hour light, intimate but classy framing",
+    "followerCount": 15400,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-5/600/800",
+    "previewPrompt": "Golden hour editorial, warm skin tones, cinematic abstract composition"
+  },
+  {
+    "id": "creator-6",
+    "slug": "the-pit-lounge",
+    "displayName": "The Pit Lounge",
+    "tagline": "Where enthusiasts gather. Cozy, curated, cheeky.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-6/200/200",
+    "avatarPrompt": "Lounge-style creator avatar, soft brown tones, welcoming editorial portrait",
+    "followerCount": 9930,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-6/600/800",
+    "previewPrompt": "Cozy interior-adjacent aesthetic, warm ambient lighting, tasteful abstract crop"
+  },
+  {
+    "id": "creator-7",
+    "slug": "silk-and-sweat",
+    "displayName": "Silk & Sweat",
+    "tagline": "Luxury meets honesty. No filter, all feeling.",
+    "avatarUrl": "https://picsum.photos/seed/pitstop-avatar-7/200/200",
+    "avatarPrompt": "Luxury editorial avatar, silk-textured backdrop, refined portrait lighting",
+    "followerCount": 18750,
+    "previewImageUrl": "https://picsum.photos/seed/pitstop-preview-7/600/800",
+    "previewPrompt": "High-end fashion editorial, silk and skin tones, abstract elegant composition"
+  }
+]

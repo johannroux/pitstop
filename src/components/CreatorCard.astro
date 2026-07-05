@@ -1,0 +1,48 @@
+---
+import type { Creator } from '../lib/types';
+import { formatCount } from '../lib/content';
+
+interface Props {
+  creator: Creator;
+}
+
+const { creator } = Astro.props;
+---
+
+<article class="group overflow-hidden rounded-2xl bg-white shadow-card transition-shadow hover:shadow-lg">
+  <div class="relative aspect-[3/4] overflow-hidden">
+    <img
+      src={creator.previewImageUrl}
+      alt=""
+      width="600"
+      height="800"
+      class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+    <div class="absolute bottom-0 left-0 right-0 p-4">
+      <div class="flex items-center gap-3">
+        <img
+          src={creator.avatarUrl}
+          alt=""
+          width="48"
+          height="48"
+          class="h-12 w-12 rounded-full object-cover ring-2 ring-cream/80"
+          loading="lazy"
+        />
+        <div>
+          <h2 class="font-heading text-lg font-semibold text-cream">
+            {creator.displayName}
+          </h2>
+          <p class="text-xs text-cream/80">
+            {formatCount(creator.followerCount)} followers
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-4">
+    <p class="text-sm text-brown/80">{creator.tagline}</p>
+  </div>
+</article>

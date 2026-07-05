@@ -1,0 +1,42 @@
+---
+const navLinks = [
+  { href: '/creators', label: 'Creators' },
+  { href: '/concepts', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="border-b border-rose/30 bg-cream/80 backdrop-blur-sm sticky top-0 z-50">
+  <nav
+    class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6"
+    aria-label="Main navigation"
+  >
+    <a
+      href="/"
+      class="font-heading text-xl font-semibold text-charcoal transition-colors hover:text-brown sm:text-2xl"
+    >
+      Pitstop
+    </a>
+
+    <ul class="flex items-center gap-6 sm:gap-8">
+      {
+        navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                'text-sm font-medium transition-colors hover:text-charcoal',
+                currentPath === href || currentPath.startsWith(`${href}/`)
+                  ? 'text-charcoal underline decoration-rose decoration-2 underline-offset-4'
+                  : 'text-brown/80',
+              ]}
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

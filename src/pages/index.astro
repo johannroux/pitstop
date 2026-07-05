@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PostCard from '../components/PostCard.astro';
+import { getPostsWithCreators } from '../lib/content';
+
+const posts = getPostsWithCreators();
+---
+
+<BaseLayout title="Home">
+  <Hero />
+
+  <section class="mx-auto max-w-xl px-4 py-8 sm:px-6">
+    <div class="space-y-6">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>

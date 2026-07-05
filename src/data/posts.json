@@ -1,0 +1,102 @@
+[
+  {
+    "id": "post-1",
+    "creatorId": "creator-1",
+    "caption": "Morning light hits different when it finds the right angle. Today's mood: unhurried and a little daring.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-1/800/600",
+    "imagePrompt": "Warm editorial close-up, abstract skin tones, soft morning light, classy not explicit",
+    "postedAt": "2026-07-05T09:15:00.000Z",
+    "likeCount": 842,
+    "commentCount": 47
+  },
+  {
+    "id": "post-2",
+    "creatorId": "creator-3",
+    "caption": "The gallery asked for 'something unexpected.' I think we delivered. Axilla as art — discuss.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-2/800/600",
+    "imagePrompt": "Fine-art gallery aesthetic, abstract arm silhouette, museum lighting, tasteful composition",
+    "postedAt": "2026-07-05T07:30:00.000Z",
+    "likeCount": 2103,
+    "commentCount": 128
+  },
+  {
+    "id": "post-3",
+    "creatorId": "creator-2",
+    "caption": "Quick pit stop before the quarterly review. Some things you can't schedule — appreciation being one of them.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-3/800/600",
+    "imagePrompt": "Office-adjacent lifestyle shot, warm tones, candid editorial feel, abstract crop",
+    "postedAt": "2026-07-04T18:45:00.000Z",
+    "likeCount": 567,
+    "commentCount": 31
+  },
+  {
+    "id": "post-4",
+    "creatorId": "creator-5",
+    "caption": "Roses are red, violets are blue — but have you ever stopped to admire the hue? A sonnet for the overlooked.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-4/800/600",
+    "imagePrompt": "Poetic golden hour image, warm rose and cream palette, abstract intimate crop",
+    "postedAt": "2026-07-04T14:20:00.000Z",
+    "likeCount": 1456,
+    "commentCount": 89
+  },
+  {
+    "id": "post-5",
+    "creatorId": "creator-4",
+    "caption": "Unscented and unbothered. Sometimes the best content is the content that doesn't try too hard.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-5/800/600",
+    "imagePrompt": "Minimal dreamy aesthetic, soft pastel warm tones, effortless editorial composition",
+    "postedAt": "2026-07-04T11:00:00.000Z",
+    "likeCount": 734,
+    "commentCount": 52
+  },
+  {
+    "id": "post-6",
+    "creatorId": "creator-7",
+    "caption": "Silk against skin. The kind of detail you notice when you slow down enough to look.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-6/800/600",
+    "imagePrompt": "Luxury fashion editorial, silk texture and warm skin tones, elegant abstract framing",
+    "postedAt": "2026-07-03T20:10:00.000Z",
+    "likeCount": 1890,
+    "commentCount": 104
+  },
+  {
+    "id": "post-7",
+    "creatorId": "creator-6",
+    "caption": "Welcome to the lounge. Pull up a chair — we've saved you a spot by the window.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-7/800/600",
+    "imagePrompt": "Cozy lounge atmosphere, warm ambient lighting, inviting abstract editorial crop",
+    "postedAt": "2026-07-03T16:30:00.000Z",
+    "likeCount": 923,
+    "commentCount": 67
+  },
+  {
+    "id": "post-8",
+    "creatorId": "creator-1",
+    "caption": "Golden hour doesn't last forever. Neither does this post — so enjoy it while it's here.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-8/800/600",
+    "imagePrompt": "Golden hour portrait crop, warm honey tones, soft bokeh, editorial fashion feel",
+    "postedAt": "2026-07-03T09:00:00.000Z",
+    "likeCount": 1102,
+    "commentCount": 73
+  },
+  {
+    "id": "post-9",
+    "creatorId": "creator-3",
+    "caption": "New series dropping soon: 'Curves You Didn't Know You Were Looking For.' Stay tuned.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-9/800/600",
+    "imagePrompt": "Teaser image for art series, abstract curves, gallery-quality composition, warm neutrals",
+    "postedAt": "2026-07-02T19:45:00.000Z",
+    "likeCount": 2567,
+    "commentCount": 156
+  },
+  {
+    "id": "post-10",
+    "creatorId": "creator-5",
+    "caption": "They asked what inspires me. I said: the pause between a wave and a whisper. They asked again. I showed them this.",
+    "imageUrl": "https://picsum.photos/seed/pitstop-post-10/800/600",
+    "imagePrompt": "Contemplative editorial image, soft motion blur, warm intimate tones, abstract crop",
+    "postedAt": "2026-07-02T12:15:00.000Z",
+    "likeCount": 1678,
+    "commentCount": 91
+  }
+]
