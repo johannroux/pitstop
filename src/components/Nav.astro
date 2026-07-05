@@ -14,9 +14,19 @@ const currentPath = Astro.url.pathname;
   >
     <a
       href="/"
-      class="touch-target -ml-2 shrink-0 font-heading text-xl text-charcoal transition-colors hover:text-rose sm:text-2xl"
+      class="touch-target group -ml-2 flex shrink-0 items-center gap-2.5 transition-colors hover:text-rose"
+      aria-label="Pitstop home"
     >
-      Pitstop
+      <img
+        src="/logo-mark.svg"
+        alt=""
+        width="36"
+        height="36"
+        class="h-8 w-8 shrink-0 sm:h-9 sm:w-9"
+      />
+      <span class="font-heading text-xl text-charcoal transition-colors group-hover:text-rose sm:text-2xl">
+        Pitstop
+      </span>
     </a>
 
     <ul class="flex shrink-0 items-center gap-1 sm:gap-2">
